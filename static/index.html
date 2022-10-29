@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="materialize.css" />
+    <title>Josia Yvan | portfolio</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <nav class="transparent">
+      <div class="brand-logo">
+        <div class="title">
+          <h1 class="title-nom">Josia Yvan</h1>
+          <h1 class="title-nom">Josia Yvan</h1>
+        </div>
+      </div>
+      <ul class="right">
+        <li><a href="">About</a></li>
+        <li><a href="">My Skills</a></li>
+        <li><a href="">Jobs</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+
+    <div class="grid">
+      <div class="letter-anim">
+        <span data-letter="Y">J</span>
+      </div>
+      <div class="letter-anim">
+        <span data-letter="V">O</span>
+      </div>
+      <div class="letter-anim">
+        <span data-letter="A">S</span>
+      </div>
+      <div class="letter-anim">
+        <span data-letter="I">I</span>
+      </div>
+      <div class="letter-anim">
+        <span data-letter="N">A</span>
+      </div>
+    </div>
+
+    <script>
+      // mouse script
+      const cursor = document.querySelector(".cursor");
+
+      // follow
+      document.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.style.top = y + "px";
+        cursor.style.left = x + "px";
+        cursor.style.display = "block";
+      });
+
+      //  cursor effect on mouseout
+      document.addEventListener("mouseout", () => {
+        cursor.style.display = "none";
+      });
+
+      //  click mouse
+      document.addEventListener("click", (e) => {
+        const curs = createCursor(e.pageX, e.pageY);
+        document.body.append(curs);
+      });
+
+      //  cursor effect on mouseclick
+      const createCursor = (x, y) => {
+        const curs = document.createElement("div");
+        curs.className = "click";
+        curs.style.top = y + "px";
+        curs.style.left = x + "px";
+        return curs;
+      };
+
+      // h1 josia
+      const h1 = document.querySelector("h1");
+      document.addEventListener("mouseenter", () => {});
+      // h1.style.color = "red";
+    </script>
+  </body>
+</html>

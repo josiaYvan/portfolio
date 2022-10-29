@@ -1,0 +1,190 @@
+:root{
+     --color: white;
+     --fond: #212121;
+     --first: #FFF300;
+     --firsta: #fff20081;
+     --second: #04071a;
+     --shadow-light : #f1f1f11e;
+     --shadow-dark : #0000001f;
+
+}
+
+*{
+     margin: 0;padding: 0;box-sizing: border-box;
+     font-family: "poppins light";
+     color: var(--color);
+     cursor: none;
+}
+body{
+     background-color: var(--fond);
+}
+/* souris */
+.cursor {
+     position: fixed;
+     width: 10px;
+     height: 10px;
+     background-color: var(--first);
+     border-radius: 20px;
+     display: none;
+}
+.cursor::before{
+     content: '';
+     position: absolute;
+     transform: translate(-33%, -33%);
+     width: 30px;
+     height: 30px;
+     background-color: var(--firsta);
+     opacity: 0.3;
+     border-radius: 20px;
+}
+.click {
+     position: absolute;
+     width: 50px;
+     height: 50px;
+     border: 2px solid var(--first);
+     border-radius: 50%;
+     transform: translate(-40%, -40%) scale(0);
+     animation: scale-up .6s ;
+}
+.click::after{
+     content: '';
+     position: absolute;
+     top: 10%;
+     left: 10%;
+     width: 80%;
+     height: 80%;
+     border: 2px solid var(--first);
+     border-radius: 50%;
+}
+
+@keyframes scale-up {
+     from {
+          transform: translate(-40%, -40%) scale(0);
+          opacity: 1;
+     }
+     to {
+          transform: translate(-40%, -40%) scale(1);
+          opacity: 0;
+     }
+}
+
+/* navigation */
+
+.right {
+     margin-right: 2em;
+     display: flex;
+     gap: 3em;
+}
+
+.title {
+     position: relative;
+     top: -85px;
+     left: 10px;
+     font-size: 50px;
+     font-family: poppins;
+}
+
+/* josia yvan */
+.title h1:nth-child(1) {
+     position: absolute;
+     color: var(--first);
+     animation: water 5s ease-in-out infinite;
+}
+.title h1:nth-child(2) {
+     position: relative;
+     top: 42px;
+     color: transparent;
+     -webkit-text-stroke: 0.1px var(--color) ;
+}
+
+
+
+@keyframes water {
+     0%{
+          clip-path: polygon(0% 45%, 15% 44%, 30% 46%, 42% 51%, 52% 56%, 64% 62%, 76% 63%, 85% 59%, 92% 56%, 100% 52%, 99% 100%, 0% 100%);
+          
+     }
+     40%{
+          clip-path: polygon(0 48%, 13% 43%, 24% 39%, 36% 38%, 50% 41%, 60% 48%, 69% 59%, 81% 63%, 93% 60%, 100% 52%, 100% 100%, 0% 100%);
+     }
+     80% {
+          clip-path: polygon(0 48%, 11% 57%, 24% 65%, 37% 64%, 50% 57%, 60% 48%, 71% 41%, 86% 40%, 95% 43%, 100% 52%, 100% 100%, 0% 100%);
+     }
+     100%{
+          clip-path: polygon(0% 45%, 15% 44%, 30% 46%, 42% 51%, 52% 56%, 64% 62%, 76% 63%, 85% 59%, 92% 56%, 100% 52%, 99% 100%, 0% 100%);
+     }
+}
+
+
+/* -------------------------------- */
+
+.grid {
+  text-align: center;
+  font-weight: bolder;
+}
+.letter-anim, .letter-anim span {
+  display: inline-block;
+     margin: 0 0.2em;
+}
+.grid span {
+  position: relative;
+  font-size: 250px;
+  perspective: 550px;
+}
+.letter-anim span::before,
+.letter-anim span::after {
+  position: absolute;
+  content: attr(data-letter);
+  inset: 0;
+  transform-origin: left;
+}
+.letter-anim span::before {
+     
+  transition: transform 0.4s ease-out;
+  color: var(--shadow-dark);
+}
+.letter-anim span::after {
+  color: var(--shadow-light);
+  transition: 
+  transform 0.4s ease-out,
+  color 0.4s ease-out;
+  transform: rotateY(-30deg);
+}
+.letter-anim:hover span::after {
+  transform: rotateY(-40deg);
+  transition: 1s ease-in-out;
+}
+.letter-anim span:hover {
+  transition: 1s ease-in-out; 
+  animation: bounce 0.6s ;
+}
+
+@keyframes bounce {
+     0% {
+          transform: scaleY(1);
+     }
+     25% {
+          transform: scaleY(1.4);
+     }
+     50% {
+          transform: scaleY(0.8);
+     }
+     75% {
+          transform: scaleY(1.1);
+     }
+     100% {
+          transform: scaleY(1);
+     }
+}
+
+.letter-anim:hover span::before {
+  transform: scaleX(0.85) skewY(20deg);
+}
+.letter-anim:nth-child(4):hover  span::after {  color: transparent;}
+.letter-anim:hover  span::after {  color: var(--first);}
+.letter-anim:hover  span {  
+     color: var(--shadow-light);
+     transition: 0.6s ease-in-out;
+}
+
+
