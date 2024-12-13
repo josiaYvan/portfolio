@@ -7,15 +7,9 @@
  *
  */
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PublicRoute from './components/middleware/PublicRoute';
-import PrivateRoute from './components/middleware/PrivateRoute';
 import NotFound from './pages/Error';
 import Home from './pages/Home';
-import Login from './pages/Login';
 import Main from './pages/Main';
-import Test from './pages/test';
-import Signup from './pages/Signup';
-import VerifyEmail from './pages/VerifyEmail';
 
 function App() {
   return (
@@ -24,16 +18,8 @@ function App() {
         {/* HOME ROUTE */}
         <Route path='/' element={<Home />} />
 
-        <Route path='/test' element={<Test />} />
-
         {/* DASHBOARD ROUTE */}
-        <Route path='/main/:tab' element={(<PrivateRoute><Main /></PrivateRoute>)} />
-        <Route path='/auth/verify-email/:id' element={(<PublicRoute><VerifyEmail /></PublicRoute>)} />
-        {/* <Route path='/main/:tab' element={<Main />} /> */}
-
-        {/* AUTH ROUTE */}
-        <Route path='/auth/login' element={(<PublicRoute><Login /></PublicRoute>)} />
-        <Route path='/auth/signup' element={(<PublicRoute><Signup /></PublicRoute>)} />
+        <Route path='/main/:tab' element={<Main />} />
 
         {/* ERROR ROUTE */}
         <Route path='*' element={<NotFound />} />

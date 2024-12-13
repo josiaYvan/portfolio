@@ -8,7 +8,7 @@
     "url": "https://josiayvan.github.io/MyPortfolio/"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.0.1",
+    "@ant-design/icons": "latest",
     "@headlessui/react": "^2.1.3",
     "@heroicons/react": "^2.1.5",
     "@react-google-maps/api": "^2.20.3",
