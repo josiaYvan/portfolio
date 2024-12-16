@@ -8,6 +8,7 @@
  *
  */
 
+import { useState } from 'react';
 import AboutMe from '../components/layout/AboutMe';
 import LinkedIn from '../components/layout/LinkedIn';
 import Menu from '../components/layout/Menu';
@@ -15,11 +16,13 @@ import Navbar from '../components/layout/navigation';
 import Profile from '../components/layout/profile';
 import { ScrollIndicator } from '../components/layout/ScrollIndicator';
 import Skills from '../components/layout/Skills';
+import { myStyle } from '../utils/style';
 
 function Home() {
+  const [themeIsDark, setThemeIsDark] = useState(true);
   return (
-    <div className=''>
-      <Navbar />
+    <div style={{ transition: 'ease-in-out 0.3s', backgroundColor: themeIsDark ? myStyle.bg : myStyle.light, color: themeIsDark ? myStyle.darkColor : myStyle.brown }}>
+      <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
       <div className='px-72'>
         <Menu />
         <div className='container px-4 pt-10 mx-auto'>
