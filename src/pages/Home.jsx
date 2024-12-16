@@ -14,6 +14,7 @@ import Menu from '../components/layout/Menu';
 import Navbar from '../components/layout/navigation';
 import Profile from '../components/layout/profile';
 import { ScrollIndicator } from '../components/layout/ScrollIndicator';
+import Skills from '../components/layout/Skills';
 
 function Home() {
   window.document.title = 'Bus`nay — Home';
@@ -36,6 +37,7 @@ function Home() {
           <LinkedIn />
           <ScrollIndicator />
           <AboutMe />
+          <Skills />
         </div>
       </div>
     </div>
