@@ -1,13 +1,29 @@
-import { Header } from 'antd/es/layout/layout';
+import React, { useState, useEffect } from 'react';
+import { Layout } from 'antd';
 import { MoonOutlined, SunOutlined } from '@ant-design/icons';
-import { myStyle } from '../../utils/style';
 
-function Navbar() {
+const { Header } = Layout;
+
+function MyHeader() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 0);
+
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <Header style={{ backgroundColor: myStyle.bg }} className='h-18 shadow-md'>
-      <div className='flex text-yellow-500 items-center mt-5 justify-between shadow-0'>
+    <Header
+      style={{ backgroundColor: '#1F1F1F' }}
+      className={`sticky top-0 z-40 h-18 px-72 transition-shadow duration-300 ${
+        scrolled ? 'shadow-md' : ''
+      }`}
+    >
+      <div className='flex items-center justify-between pt-5 text-yellow-500'>
         <div className='text-lg'>Josia Y.</div>
-        <div className='text-lg'>
+        <div className='text-lg flex space-x-2'>
           <MoonOutlined />
           <SunOutlined />
         </div>
@@ -16,4 +32,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default MyHeader;

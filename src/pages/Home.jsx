@@ -17,27 +17,27 @@ import { ScrollIndicator } from '../components/layout/ScrollIndicator';
 import Skills from '../components/layout/Skills';
 
 function Home() {
-  window.document.title = 'Bus`nay — Home';
-
   return (
-    <div className='px-72'>
+    <div className=''>
       <Navbar />
-      <Menu />
-      <div className='container px-4 pt-10 mx-auto'>
-        <div className='flex flex-col items-center justify-center'>
-          <p className=''>Hello, je suis</p>
-          {/* <p className='mt-2 font-bold text-gray-500 -mb-2 text-xs'>MASOANDRO</p> */}
-          <h1 className='font-medium text-3xl'>Josia Yvan</h1>
-          <p className='text-gray-400 mt-1 text-xs'>Ingenieur informatique</p>
-          <div className='flex space-x-6 my-10'>
-            <button className='rounded-lg border px-6 py-3'>Télécharger mon CV</button>
-            <button className='rounded-lg px-6 py-3 bg-yellow-500'>A propos de moi</button>
+      <div className='px-72'>
+        <Menu />
+        <div className='container px-4 pt-10 mx-auto'>
+          <div className='flex flex-col items-center justify-center'>
+            <p className=''>Hello, je suis</p>
+            {/* <p className='mt-2 font-bold text-gray-500 -mb-2 text-xs'>MASOANDRO</p> */}
+            <h1 className='font-medium text-3xl'>Josia Yvan</h1>
+            <p className='text-gray-400 mt-1 text-xs'>Ingenieur informatique</p>
+            <div className='flex space-x-6 my-10'>
+              <button className='rounded-lg border px-6 py-3'>Télécharger mon CV</button>
+              <button className='rounded-lg px-6 py-3 bg-yellow-500'>A propos de moi</button>
+            </div>
+            <Profile />
+            <LinkedIn />
+            <ScrollIndicator />
+            <AboutMe />
+            <Skills />
           </div>
-          <Profile />
-          <LinkedIn />
-          <ScrollIndicator />
-          <AboutMe />
-          <Skills />
         </div>
       </div>
     </div>
