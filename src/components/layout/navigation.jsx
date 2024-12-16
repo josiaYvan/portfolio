@@ -4,7 +4,7 @@ import { myStyle } from '../../utils/style';
 
 function Navbar() {
   return (
-    <Header style={{ backgroundColor: myStyle.bg }} className='px-72 h-18 shadow-md'>
+    <Header style={{ backgroundColor: myStyle.bg }} className='h-18 shadow-md'>
       <div className='flex text-yellow-500 items-center mt-5 justify-between shadow-0'>
         <div className='text-lg'>Josia Y.</div>
         <div className='text-lg'>
