@@ -1,59 +1,73 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/no-array-index-key */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/button-has-type */
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // Import Framer Motion
+import { CloseOutlined } from '@ant-design/icons';
 import { myStyle } from '../../utils/style';
 
 function Experiences({ themeIsDark }) {
   const [activeTab, setActiveTab] = useState('Tous');
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null); // État pour stocker l'élément sélectionné
+  const popupRef = useRef(null);
 
   // Définition des tabs
   const tabs = [
-    { name: 'Tous' },
     { name: 'Pro' },
+    { name: 'Tous' },
     { name: 'Formations' }
   ];
 
-  // Liste des éléments avec les tags associés
+  // Liste des éléments avec les tags et les tâches associées
   const items = [
     {
       title: 'Stage en développement web',
       location: 'Nicolas CAISSO, Distanciel',
-      tag: 'Pro'
+      tag: 'Pro',
+      tasks: ['Développer une fonctionnalité X', 'Corriger un bug dans Y', 'Écrire la documentation']
     },
     {
       title: "Création d'une micro-entreprise",
       location: 'Etabli 79, QUIMPER',
-      tag: 'Pro'
+      tag: 'Pro',
+      tasks: ['Rédiger un business plan', 'Chercher des financements', 'Mettre en place un site web']
     },
     {
       title: 'Employée polyvalente',
       location: 'Cornouaille Diffusion, ERGUE GABERIC',
-      tag: 'Pro'
+      tag: 'Pro',
+      tasks: ['Accueillir les clients', 'Gérer les stocks', 'Mettre à jour les inventaires']
     },
     {
       title: 'Apprentie coiffeuse',
       location: 'Passage bleu, METZ',
-      tag: 'Pro'
+      tag: 'Pro',
+      tasks: ['Apprendre les coupes', 'Assister le coiffeur senior', 'Prendre les rendez-vous']
     },
     {
       title: 'Bac +2 Développeur Web',
       location: 'La Digital School, BREST',
-      tag: 'Formations'
+      tag: 'Formations',
+      tasks: ['Apprendre les bases du développement', 'Réaliser des projets pratiques', 'Participer à des hackathons']
     },
     {
       title: 'CAP Coiffure',
       location: 'CFA de METZ',
       duration: '2018 - 2020',
-      tag: 'Formations'
+      tag: 'Formations',
+      tasks: ['Suivre les cours de coiffure', 'Pratiquer sur des modèles', 'Passer les examens']
     }
   ];
 
   // Filtrage des items en fonction du tab actif
   const filteredItems = activeTab === 'Tous' ? items : items.filter((item) => item.tag === activeTab);
+
+  // Ouvrir le popup et définir l'élément sélectionné
+  const openPopup = (item) => {
+    setSelectedItem(item); // Mettre l'élément sélectionné
+    setShowPopup(true); // Ouvrir le popup
+  };
 
   return (
     <div id='about' className='mt-36'>
@@ -101,21 +115,64 @@ function Experiences({ themeIsDark }) {
                   {item.duration && (
                     <p className='text-gray-500 text-xs -mt-2 mb-4'>{item.duration}</p>
                   )}
-                  <Link
-                    to='#'
+                  <button
+                    onClick={() => openPopup(item)} // Ouvrir le popup avec l'élément sélectionné
                     className='text-yellow-500 flex items-center text-xs group'
                   >
                     <p>Voir plus</p>
                     <span className='ml-1 group-hover:ml-3 transition-all duration-300 ease-in-out'>
                       →
                     </span>
-                  </Link>
+                  </button>
                 </motion.div>
               ))}
             </div>
           </AnimatePresence>
         </div>
       </div>
+
+      {/* Popup Modal */}
+      <AnimatePresence>
+        {showPopup && selectedItem && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='fixed z-20 inset-0 bg-black bg-opacity-60 flex justify-center items-center'
+          >
+            <div
+              ref={popupRef}
+              className='p-16 rounded-3xl shadow-lg max-w-lg w-full relative'
+              style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.white }}
+            >
+              <button
+                onClick={() => setShowPopup(false)}
+                className='absolute top-6 right-7 text-yellow-500'
+              >
+                <CloseOutlined />
+              </button>
+              <h3 className='text-xl text-yellow-500 text-center font-medium mb-4'>{selectedItem.title}</h3>
+              <p className='text-gray-500 text-sm text-center'>{selectedItem.location}</p>
+              {selectedItem.duration && (
+                <p className='text-gray-500 text-xs text-center'>{selectedItem.duration}</p>
+              )}
+
+              {/* Affichage des tâches */}
+              <div className='mt-4'>
+                <h4 className='font-medium'>Tâches</h4>
+                <ul className='pl-5 mt-4'>
+                  {selectedItem.tasks.map((task, index) => (
+                    <li key={index} className='text-gray-500 text-sm mt-2'>
+                      <span className='text-yellow-500 mr-4'>✔</span>
+                      {task}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
