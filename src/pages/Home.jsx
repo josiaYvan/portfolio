@@ -19,13 +19,14 @@ import { ScrollIndicator } from '../components/layout/ScrollIndicator';
 import Skills from '../components/layout/Skills';
 import { myStyle } from '../utils/style';
 import Experiences from '../components/layout/Experiences';
+import Projects from '../components/layout/Projects';
 
 function Home() {
   const [themeIsDark, setThemeIsDark] = useState(true);
   return (
     <div style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light, color: themeIsDark ? myStyle.darkColor : myStyle.brown }}>
       <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
-      <div className='px-72'>
+      <div className='px-80'>
         <Menu />
         <div className='container px-4 pt-10 mx-auto'>
           <div className='flex flex-col items-center justify-center'>
@@ -45,6 +46,7 @@ function Home() {
             <AboutMe themeIsDark={themeIsDark} />
             <Skills themeIsDark={themeIsDark} />
             <Experiences themeIsDark={themeIsDark} />
+            <Projects themeIsDark={themeIsDark} />
           </div>
         </div>
       </div>

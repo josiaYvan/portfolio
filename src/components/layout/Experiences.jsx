@@ -76,7 +76,7 @@ function Experiences({ themeIsDark }) {
         <h1 className='font-medium text-2xl text-yellow-500'>Mon parcours</h1>
       </div>
       <div className='mt-10 rounded-lg'>
-        <div className='min-h-screen px-4 p-8'>
+        <div className='px-4 p-8'>
           {/* Tabs */}
           <div className='flex justify-center space-x-8 mb-10'>
             {tabs.map((tab) => (
