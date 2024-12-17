@@ -4,9 +4,9 @@ import React from 'react';
 import { BulbOutlined, CommentOutlined, HourglassOutlined } from '@ant-design/icons';
 import { myStyle } from '../../utils/style';
 
-function AboutMe() {
+function AboutMe({ themeIsDark }) {
   return (
-    <div className='mt-36'>
+    <div id='about' className='mt-36'>
       <div className='flex flex-col items-center'>
         <p className='text-gray-400 text-xs'>Présentation</p>
         <h1 className='font-medium text-2xl text-yellow-500'>A propos de moi</h1>
@@ -21,15 +21,15 @@ function AboutMe() {
           <div className='flex flex-col ml-20'>
             <div>
               <div className='flex justify-around'>
-                <div className='flex flex-col items-center w-40 h-32 text-white py-4 mx-1 rounded-2xl' style={{ backgroundColor: myStyle.yellowDark }}>
+                <div className='flex flex-col items-center w-40 h-32 font-semibold py-4 mx-1 shadow-md rounded-2xl' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
                   <BulbOutlined className='mt-2 text-yellow-500 text-2xl' />
                   <p className='mt-2 text-center'>Créative</p>
                 </div>
-                <div className='flex flex-col items-center w-40 h-32 text-white py-4 mx-1 rounded-2xl' style={{ backgroundColor: myStyle.yellowDark }}>
+                <div className='flex flex-col items-center w-40 h-32 font-semibold py-4 mx-1 shadow-md rounded-2xl' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
                   <CommentOutlined className='mt-2 text-yellow-500 text-2xl' />
                   <p className='mt-2 text-center'>Capacité d'adaptation</p>
                 </div>
-                <div className='flex flex-col items-center w-40 h-32 text-white py-4 mx-1 rounded-2xl' style={{ backgroundColor: myStyle.yellowDark }}>
+                <div className='flex flex-col items-center w-40 h-32 font-semibold py-4 mx-1 shadow-md rounded-2xl' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
                   <HourglassOutlined className='mt-2 text-yellow-500 text-2xl' />
                   <p className='mt-2 text-center'>Autonome</p>
                 </div>
@@ -44,7 +44,7 @@ function AboutMe() {
               </p>
             </div>
             <div className='mt-8 ml-2'>
-              <button className='bg-yellow-500 text-gray-800 py-3 px-4 rounded-lg'>
+              <button className='bg-yellow-500 py-3 px-4 rounded-lg'>
                 Contactez moi
               </button>
             </div>

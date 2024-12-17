@@ -5,7 +5,8 @@ export const myStyle = {
   darkBlue: '#262F43',
   accent: '#FFEBBC',
   brown: '#543D46',
+  white: '#f5f5f5',
   black: '#292830',
-  light: 'rgb(236, 236, 236)',
+  light: '#F1F1F1',
   yellowDark: '#6754003d'
 };

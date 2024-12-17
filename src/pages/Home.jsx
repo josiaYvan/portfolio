@@ -9,6 +9,7 @@
  */
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AboutMe from '../components/layout/AboutMe';
 import LinkedIn from '../components/layout/LinkedIn';
 import Menu from '../components/layout/Menu';
@@ -21,7 +22,7 @@ import { myStyle } from '../utils/style';
 function Home() {
   const [themeIsDark, setThemeIsDark] = useState(true);
   return (
-    <div style={{ transition: 'ease-in-out 0.3s', backgroundColor: themeIsDark ? myStyle.bg : myStyle.light, color: themeIsDark ? myStyle.darkColor : myStyle.brown }}>
+    <div style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light, color: themeIsDark ? myStyle.darkColor : myStyle.brown }}>
       <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
       <div className='px-72'>
         <Menu />
@@ -32,14 +33,16 @@ function Home() {
             <h1 className='font-medium text-3xl'>Josia Yvan</h1>
             <p className='text-gray-400 mt-1 text-xs'>Ingenieur informatique</p>
             <div className='flex space-x-6 my-10'>
-              <button className='rounded-lg border px-6 py-3'>Télécharger mon CV</button>
-              <button className='rounded-lg px-6 py-3 bg-yellow-500'>A propos de moi</button>
+              <button className='rounded-lg border border-yellow-500 color-yellow-500 text-yellow-500 px-6 py-3'>Télécharger mon CV</button>
+              <Link to='#about' hrefLang='#about'>
+                <button className='rounded-lg px-6 py-3 bg-yellow-500'>A propos de moi</button>
+              </Link>
             </div>
             <Profile />
-            <LinkedIn />
-            <ScrollIndicator />
-            <AboutMe />
-            <Skills />
+            <LinkedIn themeIsDark={themeIsDark} />
+            <ScrollIndicator themeIsDark={themeIsDark} />
+            <AboutMe themeIsDark={themeIsDark} />
+            <Skills themeIsDark={themeIsDark} />
           </div>
         </div>
       </div>

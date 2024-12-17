@@ -18,7 +18,7 @@ function MyHeader({ themeIsDark, setThemeIsDark }) {
 
   return (
     <Header
-      style={{ transition: 'ease-in-out 0.3s', backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }}
+      style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }}
       className={`sticky top-0 z-40 h-18 px-72 transition-shadow duration-300 ${
         scrolled ? 'shadow-md' : ''
       }`}

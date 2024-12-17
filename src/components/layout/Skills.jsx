@@ -4,16 +4,16 @@ import {
 } from '@ant-design/icons';
 import { myStyle } from '../../utils/style';
 
-function Skills() {
+function Skills({ themeIsDark }) {
   return (
     <div className='mt-36'>
       <div className='flex flex-col items-center'>
         <p className='text-gray-400 text-xs'>Mes softskills</p>
         <h1 className='font-medium text-2xl text-yellow-500'>Mes compétences</h1>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 p-6 text-white'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 p-6'>
         {/* Section Développement Web */}
-        <div className='mt-16 rounded-2xl py-10 px-20' style={{ backgroundColor: myStyle.yellowDark }}>
+        <div className='mt-16 rounded-2xl shadow-md py-10 px-20' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
           <h2 className='text-yellow-500 text-center mb-6'>Développement Web</h2>
           <div className='grid grid-cols-2 gap-6'>
             {/* HTML */}
@@ -80,7 +80,7 @@ function Skills() {
         </div>
 
         {/* Section Web-Design */}
-        <div className='mt-16 rounded-2xl py-10 px-20' style={{ backgroundColor: myStyle.yellowDark }}>
+        <div className='mt-16 rounded-2xl shadow-md py-10 px-20' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
           <h2 className='text-yellow-500 text-center mb-6'>Web-Design</h2>
           <div className='grid grid-cols-2 gap-6'>
             {/* Figma */}

@@ -4,7 +4,7 @@ import React from 'react';
 function Profile() {
   return (
     <div className=''>
-      <div className=''>
+      <div className='shadow rounded'>
         <svg
           width='1044'
           height='902'
