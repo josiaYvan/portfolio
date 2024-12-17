@@ -3,9 +3,9 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import { CloseOutlined } from '@ant-design/icons';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { myStyle } from '../../utils/style';
+import Popup from './Popup';
 
 const projects = [
   {
@@ -157,43 +157,14 @@ function Projects({ themeIsDark }) {
       </div>
 
       {/* Popup */}
-      <AnimatePresence>
-        {showPopup && selectedProject && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className='fixed z-20 inset-0 bg-black bg-opacity-60 flex justify-center items-center'
-        >
-          <div
-            className='p-16 rounded-3xl shadow-lg max-w-lg w-full relative'
-            style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.white }}
-          >
-            <button
-              onClick={() => setShowPopup(false)}
-              className='absolute top-6 right-7 text-yellow-500'
-            >
-              <CloseOutlined />
-            </button>
-            <h2 className='text-xl text-yellow-500 text-center font-medium mb-4'>{selectedProject.title}</h2>
-            <p className='text-gray-600 text-center text-sm mb-4'>{selectedProject.description}</p>
-            {/* Affichage des tâches */}
-            <div className='mt-4'>
-              <h4 className='font-medium'>Tâches</h4>
-              <ul className='pl-5 mt-4'>
-                {selectedProject.tasks.map((task, index) => (
-                  <li key={index} className='text-gray-500 flex space-x-2 text-sm mt-3'>
-                    <span className='text-yellow-500 mr-4'>✔</span>
-                    <p>{task}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </motion.div>
+      {/* Popup Modal */}
+      <Popup
+        showPopup={showPopup}
+        selectedItem={selectedProject}
+        onClose={() => setShowPopup(false)} // Fonction pour fermer le popup
+        themeIsDark={themeIsDark}
+      />
 
-        )}
-      </AnimatePresence>
     </div>
   );
 }
