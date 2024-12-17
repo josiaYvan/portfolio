@@ -18,6 +18,7 @@ import Profile from '../components/layout/profile';
 import { ScrollIndicator } from '../components/layout/ScrollIndicator';
 import Skills from '../components/layout/Skills';
 import { myStyle } from '../utils/style';
+import Experiences from '../components/layout/Experiences';
 
 function Home() {
   const [themeIsDark, setThemeIsDark] = useState(true);
@@ -43,6 +44,7 @@ function Home() {
             <ScrollIndicator themeIsDark={themeIsDark} />
             <AboutMe themeIsDark={themeIsDark} />
             <Skills themeIsDark={themeIsDark} />
+            <Experiences themeIsDark={themeIsDark} />
           </div>
         </div>
       </div>

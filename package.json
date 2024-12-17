@@ -22,6 +22,7 @@
     "cra-template": "1.2.0",
     "dayjs": "^1.11.7",
     "express": "^4.19.2",
+    "framer-motion": "^11.15.0",
     "jwt-decode": "^3.1.2",
     "moment": "^2.30.1",
     "nodemon": "^3.1.4",

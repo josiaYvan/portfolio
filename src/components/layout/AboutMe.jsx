@@ -44,7 +44,7 @@ function AboutMe({ themeIsDark }) {
               </p>
             </div>
             <div className='mt-8 ml-2'>
-              <button className='bg-yellow-500 py-3 px-4 rounded-lg'>
+              <button className='bg-yellow-500 py-3 px-4 rounded-lg' style={{ color: themeIsDark ? myStyle.bg : myStyle.white }}>
                 Contactez moi
               </button>
             </div>
