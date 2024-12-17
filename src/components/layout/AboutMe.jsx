@@ -5,6 +5,12 @@ import { BulbOutlined, CommentOutlined, HourglassOutlined } from '@ant-design/ic
 import { myStyle } from '../../utils/style';
 
 function AboutMe({ themeIsDark }) {
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
     <section id='about'>
       <div id='about' className='mt-36'>
@@ -45,8 +51,8 @@ function AboutMe({ themeIsDark }) {
                 </p>
               </div>
               <div className='mt-8 ml-2'>
-                <button className='bg-yellow-500 py-3 px-4 rounded-lg' style={{ color: themeIsDark ? myStyle.bg : myStyle.white }}>
-                  Contactez moi
+                <button className='bg-yellow-500 py-3 px-4 rounded-lg hover:bg-yellow-600 hover:shadow-[0_0px_10px_rgba(227,178,0,0.5)]' style={{ color: themeIsDark ? myStyle.bg : myStyle.white }} onClick={() => handleScroll('contact')}>
+                  <a href='#contact'>Contactez moi</a>
                 </button>
               </div>
             </div>

@@ -83,7 +83,7 @@ function Experiences({ themeIsDark }) {
                 key={tab.name}
                 className={`px-8 py-2 text-lg border rounded-xl ${
                   activeTab === tab.name ?
-                    'bg-yellow-600 border-transparent' :
+                    'bg-yellow-500 border-transparent' :
                     'border-yellow-500 !text-yellow-500'
                 } transition duration-300`}
                 style={{ color: themeIsDark ? myStyle.bg : myStyle.white }}

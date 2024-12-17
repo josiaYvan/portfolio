@@ -24,7 +24,7 @@ function Footer({ themeIsDark }) {
           <a href='#about' className='mx-2 text-gray-600 hover:text-gray-800'>
             À propos
           </a>
-          <a href='#portfolio' className='mx-2 text-gray-600 hover:text-gray-800'>
+          <a href='#projects' className='mx-2 text-gray-600 hover:text-gray-800'>
             Portfolio
           </a>
         </nav>

@@ -12,12 +12,20 @@ function Welcome({ themeIsDark }) {
         <h1 className='font-medium text-3xl'>Josia Yvan</h1>
         <p className='text-gray-400 mt-1 text-xs'>Ingenieur informatique</p>
         <div className='flex space-x-6 my-10'>
-          <button className='rounded-lg border border-yellow-500 color-yellow-500 text-yellow-500 px-6 py-3'>
-            Télécharger mon CV
+          <button
+            className='rounded-lg border border-yellow-500 text-yellow-500 px-6 py-3
+             shadow hover:shadow-inner
+             hover:shadow-yellow-700 active:shadow-inner
+             transition-all duration-600'
+          >
+            <a href='/documents/cv.pdf' download='CV de Josia Y. Ingenieur informatique.pdf'>
+              Télécharger mon CV
+            </a>
           </button>
+
           <Link to='#about'>
             <button
-              className='rounded-lg px-6 py-3 bg-yellow-500'
+              className='rounded-lg px-6 py-3 bg-yellow-500 hover:bg-yellow-600'
               style={{ color: !themeIsDark ? myStyle.white : myStyle.bg }}
             >
               A propos de moi
