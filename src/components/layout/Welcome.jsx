@@ -7,7 +7,7 @@ import Profile from './profile';
 function Welcome({ themeIsDark }) {
   return (
     <section id='home'>
-      <div className='flex flex-col items-center justify-center'>
+      <div className='flex pt-10 flex-col items-center justify-center'>
         <p className=''>Hello, je suis</p>
         <h1 className='font-medium text-3xl'>Josia Yvan</h1>
         <p className='text-gray-400 mt-1 text-xs'>Ingenieur informatique</p>

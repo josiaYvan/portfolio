@@ -60,7 +60,7 @@ function Home() {
       <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
       <div className='px-80'>
         <Menu activeSection={activeSection} />
-        <div className='container px-4 pt-10 mx-auto'>
+        <div className='container flex flex-col px-4 mx-auto'>
           <Welcome themeIsDark={themeIsDark} />
           <LinkedIn themeIsDark={themeIsDark} />
           <ScrollIndicator themeIsDark={themeIsDark} />
