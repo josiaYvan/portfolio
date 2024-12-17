@@ -59,7 +59,7 @@ function Contact({ themeIsDark }) {
                   type='text'
                   id='name'
                   placeholder='Votre nom'
-                  className='w-full p-6 rounded-2xl border-2 border-gray-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 text-sm'
+                  className='w-full p-6 rounded-2xl border-2 border-gray-500 text-sm'
                   style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }}
                 />
               </div>
@@ -71,7 +71,7 @@ function Contact({ themeIsDark }) {
                   type='email'
                   id='email'
                   placeholder='Votre mail'
-                  className='w-full p-6 rounded-2xl border-2 border-gray-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 text-sm'
+                  className='w-full p-6 rounded-2xl border-2 border-gray-500 text-sm'
                   style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }}
                 />
               </div>
@@ -83,7 +83,7 @@ function Contact({ themeIsDark }) {
                   id='message'
                   rows='4'
                   placeholder='Votre message'
-                  className='w-full p-6 rounded-2xl border-2 border-gray-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 text-sm'
+                  className='w-full p-6 rounded-2xl border-2 border-gray-500 text-sm'
                   style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }}
                 />
               </div>
