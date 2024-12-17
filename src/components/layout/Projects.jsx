@@ -89,83 +89,85 @@ function Projects({ themeIsDark }) {
   };
 
   return (
-    <div id='about' className='mt-36'>
-      <div className='flex flex-col items-center'>
-        <p className='text-gray-400 text-xs'>Mes projets</p>
-        <h1 className='font-medium text-2xl text-yellow-500'>Mon Portfolio</h1>
-      </div>
+    <section id='projects'>
+      <div id='about' className='mt-36'>
+        <div className='flex flex-col items-center'>
+          <p className='text-gray-400 text-xs'>Mes projets</p>
+          <h1 className='font-medium text-2xl text-yellow-500'>Mon Portfolio</h1>
+        </div>
 
-      <div className='mt-10 rounded-lg'>
-        <div className='p-8'>
-          {/* Filtre de projet */}
-          <div
-            className='flex justify-center space-x-6 mb-8'
-            style={{ color: !themeIsDark ? myStyle.bg : myStyle.white }}
-          >
-            {['Tous', 'Web', 'Prototype Figma', 'Design'].map((tag) => (
-              <button
-                key={tag}
-                className={`${
-                  selectedTag === tag && 'bg-yellow-500'
-                } px-4 py-2 rounded-lg`}
-                style={{
-                  color:
+        <div className='mt-10 rounded-lg'>
+          <div className='p-8'>
+            {/* Filtre de projet */}
+            <div
+              className='flex justify-center space-x-6 mb-8'
+              style={{ color: !themeIsDark ? myStyle.bg : myStyle.white }}
+            >
+              {['Tous', 'Web', 'Prototype Figma', 'Design'].map((tag) => (
+                <button
+                  key={tag}
+                  className={`${
+                    selectedTag === tag && 'bg-yellow-500'
+                  } px-4 py-2 rounded-lg`}
+                  style={{
+                    color:
                     selectedTag === tag && (!themeIsDark ? myStyle.white : myStyle.bg)
-                }}
-                onClick={() => setSelectedTag(tag)}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
+                  }}
+                  onClick={() => setSelectedTag(tag)}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
 
-          {/* Cartes de projet avec animation */}
-          <div className='grid grid-cols-2 gap-6'>
-            {filterProjects().map((project, index) => (
-              <motion.div
-                key={index}
-                className='p-4 m-4 rounded-2xl shadow-lg h-[28.5rem] overflow-hidden flex flex-col'
-                style={{
-                  backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white
-                }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <img
-                  src={project.imageSrc}
-                  alt={project.altText}
-                  className='rounded-xl h-[350px] object-cover'
-                />
-                <div className='flex-grow'>
-                  <h3 className='text-lg font-bold mt-5 mb-2'>{project.title}</h3>
-                  <button
-                    onClick={() => openPopup(project)}
-                    className='text-yellow-500 flex items-center text-xs group'
-                  >
-                    <p>Voir plus</p>
-                    <span className='ml-1 group-hover:ml-3 transition-all duration-300 ease-in-out'>
-                      →
-                    </span>
-                  </button>
-                </div>
-              </motion.div>
-            ))}
+            {/* Cartes de projet avec animation */}
+            <div className='grid grid-cols-2 gap-6'>
+              {filterProjects().map((project, index) => (
+                <motion.div
+                  key={index}
+                  className='p-4 m-4 rounded-2xl shadow-lg h-[28.5rem] overflow-hidden flex flex-col'
+                  style={{
+                    backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white
+                  }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img
+                    src={project.imageSrc}
+                    alt={project.altText}
+                    className='rounded-xl h-[350px] object-cover'
+                  />
+                  <div className='flex-grow'>
+                    <h3 className='text-lg font-bold mt-5 mb-2'>{project.title}</h3>
+                    <button
+                      onClick={() => openPopup(project)}
+                      className='text-yellow-500 flex items-center text-xs group'
+                    >
+                      <p>Voir plus</p>
+                      <span className='ml-1 group-hover:ml-3 transition-all duration-300 ease-in-out'>
+                        →
+                      </span>
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Popup */}
+        {/* Popup Modal */}
+        <Popup
+          showPopup={showPopup}
+          selectedItem={selectedProject}
+          onClose={() => setShowPopup(false)} // Fonction pour fermer le popup
+          themeIsDark={themeIsDark}
+        />
+
       </div>
-
-      {/* Popup */}
-      {/* Popup Modal */}
-      <Popup
-        showPopup={showPopup}
-        selectedItem={selectedProject}
-        onClose={() => setShowPopup(false)} // Fonction pour fermer le popup
-        themeIsDark={themeIsDark}
-      />
-
-    </div>
+    </section>
   );
 }
 
