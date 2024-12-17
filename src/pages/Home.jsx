@@ -56,6 +56,7 @@ function Home() {
         backgroundColor: themeIsDark ? myStyle.bg : myStyle.light,
         color: themeIsDark ? myStyle.darkColor : myStyle.brown
       }}
+      className='transition duration-500 ease-in-out'
     >
       <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
       <div className='px-80'>
