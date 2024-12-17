@@ -20,6 +20,7 @@ import Skills from '../components/layout/Skills';
 import { myStyle } from '../utils/style';
 import Experiences from '../components/layout/Experiences';
 import Projects from '../components/layout/Projects';
+import Contact from '../components/layout/Contact';
 
 function Home() {
   const [themeIsDark, setThemeIsDark] = useState(true);
@@ -37,7 +38,7 @@ function Home() {
             <div className='flex space-x-6 my-10'>
               <button className='rounded-lg border border-yellow-500 color-yellow-500 text-yellow-500 px-6 py-3'>Télécharger mon CV</button>
               <Link to='#about' hrefLang='#about'>
-                <button className='rounded-lg px-6 py-3 bg-yellow-500'>A propos de moi</button>
+                <button className='rounded-lg px-6 py-3 bg-yellow-500' style={{ color: (!themeIsDark ? myStyle.white : myStyle.bg) }}>A propos de moi</button>
               </Link>
             </div>
             <Profile />
@@ -47,6 +48,7 @@ function Home() {
             <Skills themeIsDark={themeIsDark} />
             <Experiences themeIsDark={themeIsDark} />
             <Projects themeIsDark={themeIsDark} />
+            <Contact themeIsDark={themeIsDark} />
           </div>
         </div>
       </div>
