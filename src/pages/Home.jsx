@@ -21,6 +21,7 @@ import { myStyle } from '../utils/style';
 import Experiences from '../components/layout/Experiences';
 import Projects from '../components/layout/Projects';
 import Contact from '../components/layout/Contact';
+import Footer from '../components/layout/Footer';
 
 function Home() {
   const [themeIsDark, setThemeIsDark] = useState(true);
@@ -52,6 +53,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer themeIsDark={themeIsDark} />
     </div>
   );
 }
