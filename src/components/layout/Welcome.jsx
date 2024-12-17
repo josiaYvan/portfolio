@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { myStyle } from '../../utils/style';
+import Profile from './profile';
 
 function Welcome({ themeIsDark }) {
   return (
@@ -24,6 +25,7 @@ function Welcome({ themeIsDark }) {
           </Link>
         </div>
       </div>
+      <Profile themeIsDark={themeIsDark} />
     </section>
   );
 }

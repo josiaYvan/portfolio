@@ -12,7 +12,6 @@ import AboutMe from '../components/layout/AboutMe';
 import LinkedIn from '../components/layout/LinkedIn';
 import Menu from '../components/layout/Menu';
 import Navbar from '../components/layout/navigation';
-import Profile from '../components/layout/profile';
 import { ScrollIndicator } from '../components/layout/ScrollIndicator';
 import Skills from '../components/layout/Skills';
 import { myStyle } from '../utils/style';
@@ -61,11 +60,8 @@ function Home() {
       <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
       <div className='px-80'>
         <Menu activeSection={activeSection} />
-        {' '}
-        {/* Passe la section active au composant Menu */}
         <div className='container px-4 pt-10 mx-auto'>
           <Welcome themeIsDark={themeIsDark} />
-          <Profile themeIsDark={themeIsDark} />
           <LinkedIn themeIsDark={themeIsDark} />
           <ScrollIndicator themeIsDark={themeIsDark} />
           <AboutMe themeIsDark={themeIsDark} />
