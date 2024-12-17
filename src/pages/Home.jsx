@@ -42,7 +42,7 @@ function Home() {
                 <button className='rounded-lg px-6 py-3 bg-yellow-500' style={{ color: (!themeIsDark ? myStyle.white : myStyle.bg) }}>A propos de moi</button>
               </Link>
             </div>
-            <Profile />
+            <Profile themeIsDark={themeIsDark} />
             <LinkedIn themeIsDark={themeIsDark} />
             <ScrollIndicator themeIsDark={themeIsDark} />
             <AboutMe themeIsDark={themeIsDark} />

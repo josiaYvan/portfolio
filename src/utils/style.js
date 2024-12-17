@@ -4,5 +4,7 @@ export const myStyle = {
   brown: 'rgb(84, 61, 70)',
   white: '#fff',
   light: 'rgb(254, 251, 236)',
-  yellowDark: '#6754003d'
+  yellowDark: '#6754003d',
+  yellow: 'rgb(227, 178, 0)',
+  path: '#E5E5E5'
 };
