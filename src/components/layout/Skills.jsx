@@ -7,14 +7,14 @@ import { myStyle } from '../../utils/style';
 function Skills({ themeIsDark }) {
   return (
     <section id='skills'>
-      <div className='mt-36'>
+      <div className='mt-20 lg:mt-36'>
         <div className='flex flex-col items-center'>
           <p className='text-gray-400 text-xs'>Mes softskills</p>
           <h1 className='font-medium text-2xl text-yellow-500'>Mes compétences</h1>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 p-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-8 p-6'>
           {/* Section Développement Web */}
-          <div className='mt-16 rounded-2xl shadow-md py-10 px-20' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
+          <div className='mt-5 lg:mt-16 min-w-[400px] lg:w-full mx-auto rounded-2xl shadow-md py-10 px-20' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
             <h2 className='text-yellow-500 text-center mb-6'>Développement Web</h2>
             <div className='grid grid-cols-2 gap-6'>
               {/* HTML */}
@@ -81,7 +81,7 @@ function Skills({ themeIsDark }) {
           </div>
 
           {/* Section Web-Design */}
-          <div className='mt-16 rounded-2xl shadow-md py-10 px-20' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
+          <div className='mt-5 lg:mt-16 min-w-[400px] lg:w-full mx-auto  rounded-2xl shadow-md py-10 px-20' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
             <h2 className='text-yellow-500 text-center mb-6'>Web-Design</h2>
             <div className='grid grid-cols-2 gap-6'>
               {/* Figma */}
