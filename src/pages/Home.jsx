@@ -9,10 +9,8 @@
  */
 import { useState, useEffect } from 'react';
 import AboutMe from '../components/layout/AboutMe';
-import LinkedIn from '../components/layout/LinkedIn';
 import Menu from '../components/layout/Menu';
 import Navbar from '../components/layout/navigation';
-import { ScrollIndicator } from '../components/layout/ScrollIndicator';
 import Skills from '../components/layout/Skills';
 import { myStyle } from '../utils/style';
 import Experiences from '../components/layout/Experiences';
@@ -56,24 +54,21 @@ function Home() {
         backgroundColor: themeIsDark ? myStyle.bg : myStyle.light,
         color: themeIsDark ? myStyle.darkColor : myStyle.brown
       }}
-      className='transition duration-500 ease-in-out'
+      className='flex flex-col items-center transition duration-500 ease-in-out'
     >
-      <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
-      <div className='px-80'>
+      <div className='max-w-[920px] border w-full mx-auto'>
+        <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
         <Menu activeSection={activeSection} />
-        <div className='container flex flex-col px-4 mx-auto'>
-          <Welcome themeIsDark={themeIsDark} />
-          <LinkedIn themeIsDark={themeIsDark} />
-          <ScrollIndicator themeIsDark={themeIsDark} />
-          <AboutMe themeIsDark={themeIsDark} />
-          <Skills themeIsDark={themeIsDark} />
-          <Experiences themeIsDark={themeIsDark} />
-          <Projects themeIsDark={themeIsDark} />
-          <Contact themeIsDark={themeIsDark} />
-        </div>
+        <Welcome themeIsDark={themeIsDark} />
+        <AboutMe themeIsDark={themeIsDark} />
+        <Skills themeIsDark={themeIsDark} />
+        <Experiences themeIsDark={themeIsDark} />
+        <Projects themeIsDark={themeIsDark} />
+        <Contact themeIsDark={themeIsDark} />
       </div>
       <Footer themeIsDark={themeIsDark} />
     </div>
+
   );
 }
 

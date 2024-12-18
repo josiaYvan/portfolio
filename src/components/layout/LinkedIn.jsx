@@ -6,18 +6,18 @@ import { myStyle } from '../../utils/style';
 
 function LinkedIn({ themeIsDark }) {
   return (
-    <div className='absolute left-80 flex flex-col space-y-2 items-center -bottom-32'>
-      <Link to='https://linkedin.com/in/josia-yvan/' target='_blank'>
-        <button className='flex justify-center items-center w-10 h-10 rounded shadow-md backdrop-blur-md' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
-          <LinkedinFilled className='text-yellow-500' style={{ color: !themeIsDark && myStyle.brown }} />
-        </button>
-      </Link>
+    <div className='absolute left-5 flex flex-col space-y-2 items-center bottom-36 xl:-bottom-32'>
       <Link to='https://github.com/josiaYvan/' target='_blank'>
-        <button className='flex justify-center items-center w-10 h-10 rounded shadow-md backdrop-blur-md' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
+        <button className='flex justify-center items-center w-8 xl:w-10 h-8 xl:h-10 rounded shadow-md backdrop-blur-md' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
           <GithubFilled className='text-yellow-500' style={{ color: !themeIsDark && myStyle.brown }} />
         </button>
       </Link>
-      <div className='w-[2px] h-16 rounded bg-yellow-500' style={{ backgroundColor: !themeIsDark && myStyle.brown }} />
+      <Link to='https://linkedin.com/in/josia-yvan/' target='_blank'>
+        <button className='flex justify-center items-center w-8 xl:w-10 h-8 xl:h-10 rounded shadow-md backdrop-blur-md' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
+          <LinkedinFilled className='text-yellow-500' style={{ color: !themeIsDark && myStyle.brown }} />
+        </button>
+      </Link>
+      <div className='w-[2px] h-12 xl:h-16  bg-yellow-500' style={{ backgroundColor: !themeIsDark && myStyle.brown }} />
     </div>
   );
 }

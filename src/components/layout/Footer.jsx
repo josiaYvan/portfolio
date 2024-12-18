@@ -4,7 +4,7 @@ import { myStyle } from '../../utils/style';
 
 function Footer({ themeIsDark }) {
   return (
-    <footer className='relative pb-32 bg-yellow-50'>
+    <footer className='relative w-full pb-32 bg-yellow-50'>
       <div className='absolute -top-4 w-full z-10 h-10 transition-colors duration-500 ease-in-out' style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }} />
       <div className='z-0'>
         <svg
