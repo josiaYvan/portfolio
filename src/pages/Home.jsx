@@ -56,7 +56,7 @@ function Home() {
       }}
       className='flex flex-col items-center transition duration-500 ease-in-out'
     >
-      <div className='max-w-[920px] border w-full mx-auto'>
+      <div className='max-w-[920px] w-full mx-auto'>
         <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
         <Menu activeSection={activeSection} />
         <Welcome themeIsDark={themeIsDark} />

@@ -4,11 +4,10 @@ import { myStyle } from '../../utils/style';
 
 function Profile({ themeIsDark }) {
   return (
-    <div className=''>
-      <div className=''>
+    <div className='mt-10'>
+      <div className='lg:w-full w-[35rem] mx-auto'>
         <svg
-          width='1044'
-          height='902'
+          className='w-full'
           viewBox='0 0 1044 902'
           fill='none'
         >
