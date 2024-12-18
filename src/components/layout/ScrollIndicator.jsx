@@ -4,7 +4,7 @@ import { myStyle } from '../../utils/style';
 
 export function ScrollIndicator({ themeIsDark }) {
   return (
-    <div className='absolute -right-6 lg:right-20 bottom-12 lg:-top-20 rotate-90 flex space-x-2 items-center'>
+    <div className='absolute right-3 lg:right-20 top-44 lg:top-72 rotate-90 flex space-x-2 items-center'>
       <p className='text-yellow-500 text-xs' style={{ color: !themeIsDark && myStyle.brown }}>Scroll Down</p>
       <ChevronDoubleRightIcon className='text-yellow-500 w-4' style={{ color: !themeIsDark && myStyle.brown }} />
     </div>

@@ -3,8 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { myStyle } from '../../utils/style';
 import Profile from './profile';
-import LinkedIn from './LinkedIn';
-import { ScrollIndicator } from './ScrollIndicator';
 
 function Welcome({ themeIsDark }) {
   return (
@@ -36,11 +34,7 @@ function Welcome({ themeIsDark }) {
         </div>
       </div>
 
-      <div className='relative'>
-        <LinkedIn themeIsDark={themeIsDark} />
-        <Profile themeIsDark={themeIsDark} />
-        <ScrollIndicator themeIsDark={themeIsDark} />
-      </div>
+      <Profile themeIsDark={themeIsDark} />
     </section>
   );
 }

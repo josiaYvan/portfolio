@@ -54,10 +54,10 @@ function Home() {
         backgroundColor: themeIsDark ? myStyle.bg : myStyle.light,
         color: themeIsDark ? myStyle.darkColor : myStyle.brown
       }}
-      className='flex flex-col items-center transition duration-500 ease-in-out'
+      className='transition duration-500 ease-in-out'
     >
-      <div className='max-w-[920px] w-full mx-auto'>
-        <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
+      <Navbar setThemeIsDark={setThemeIsDark} themeIsDark={themeIsDark} />
+      <div className='flex flex-col items-center max-w-[920px] w-full mx-auto'>
         <Menu activeSection={activeSection} />
         <Welcome themeIsDark={themeIsDark} />
         <AboutMe themeIsDark={themeIsDark} />

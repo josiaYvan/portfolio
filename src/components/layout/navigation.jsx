@@ -23,12 +23,14 @@ function MyHeader({ themeIsDark, setThemeIsDark }) {
         scrolled ? 'shadow-md' : ''
       }`}
     >
-      <div className='flex items-center justify-between pt-5 text-yellow-500'>
-        <div className='text-lg'>Josia Y.</div>
-        <div className='text-lg flex space-x-2'>
-          <button onClick={() => setThemeIsDark(!themeIsDark)}>
-            {!themeIsDark ? <MoonOutlined /> : <SunOutlined />}
-          </button>
+      <div className='max-w-[920px] mx-auto'>
+        <div className='flex items-center justify-between pt-5 text-yellow-500'>
+          <div className='text-lg'>Josia Y.</div>
+          <div className='text-lg flex space-x-2'>
+            <button onClick={() => setThemeIsDark(!themeIsDark)}>
+              {!themeIsDark ? <MoonOutlined /> : <SunOutlined />}
+            </button>
+          </div>
         </div>
       </div>
     </Header>

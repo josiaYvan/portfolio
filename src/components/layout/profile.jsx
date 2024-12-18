@@ -1,11 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { myStyle } from '../../utils/style';
+import { ScrollIndicator } from './ScrollIndicator';
+import LinkedIn from './LinkedIn';
 
 function Profile({ themeIsDark }) {
   return (
-    <div className='mt-10'>
-      <div className='lg:w-full w-[35rem] mx-auto'>
+    <div className='relative mt-10'>
+      <LinkedIn themeIsDark={themeIsDark} />
+      <ScrollIndicator themeIsDark={themeIsDark} />
+
+      <div className='lg:w-[900px] w-[35rem] mx-auto'>
         <svg
           className='w-full'
           viewBox='0 0 1044 902'

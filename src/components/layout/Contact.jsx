@@ -7,7 +7,7 @@ import { myStyle } from '../../utils/style';
 function Contact({ themeIsDark }) {
   return (
     <section id='contact'>
-      <div className='mt-16 lg:mt-36'>
+      <div className='mt-20 lg:mt-36'>
         {/* Titre */}
         <div className='flex flex-col items-center'>
           <p className='text-gray-400 text-xs'>Get in touch</p>
