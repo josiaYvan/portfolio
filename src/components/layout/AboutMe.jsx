@@ -28,7 +28,7 @@ function AboutMe({ themeIsDark }) {
             />
             <div className='flex flex-col lg:ml-20 mt-8'>
               <div>
-                <div className='flex justify-around mx-auto w-[500px]'>
+                <div className='flex justify-around mx-auto w-[450px] lg:w-[500px]'>
                   <div className='flex flex-col items-center w-40 h-26 lg:h-32 font-semibold lg:text-base text-sm lg:py-4 py-3 mx-1 shadow-md lg:rounded-2xl rounded-xl' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
                     <BulbOutlined className='mt-2 text-yellow-500 lg:text-2xl text-xl' />
                     <p className='mt-2 text-center'>Créative</p>
