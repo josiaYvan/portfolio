@@ -69,15 +69,15 @@ function Experiences({ themeIsDark }) {
   };
 
   return (
-    <div id='about' className='mt-36'>
+    <div id='about' className='mt-20 lg:mt-36'>
       <div className='flex flex-col items-center'>
         <p className='text-gray-400 text-xs'>Mon expérience</p>
         <h1 className='font-medium text-2xl text-yellow-500'>Mon parcours</h1>
       </div>
-      <div className='mt-10 rounded-lg'>
+      <div className='mt-5 lg:mt-10 rounded-lg'>
         <div className='px-4 p-8'>
           {/* Tabs */}
-          <div className='flex justify-center space-x-8 mb-10'>
+          <div className='flex justify-center space-x-8'>
             {tabs.map((tab) => (
               <button
                 key={tab.name}
@@ -96,7 +96,7 @@ function Experiences({ themeIsDark }) {
 
           {/* Cards */}
           <AnimatePresence mode='popLayout'>
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20'>
+            <div className='grid grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-4 lg:px-20 lg:mt-20'>
               {filteredItems.map((item, index) => (
                 <motion.div
                   key={index} // Utilisez une clé unique basée sur le titre
@@ -104,7 +104,7 @@ function Experiences({ themeIsDark }) {
                   animate={{ opacity: 1, scale: 1 }} // État final (taille normale)
                   exit={{ opacity: 0.5, scale: 0.5 }} // Animation de disparition (réduite)
                   transition={{ duration: 0.3 }} // Durée de l'animation
-                  className='p-10 m-3 rounded-2xl shadow-[0_0px_10px_rgba(0,0,0,0.25)]'
+                  className='p-10 lg:m-3 rounded-2xl shadow-[0_0px_10px_rgba(0,0,0,0.25)]'
                   style={{
                     backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white
                   }}
