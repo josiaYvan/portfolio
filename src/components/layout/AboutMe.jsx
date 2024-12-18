@@ -42,7 +42,7 @@ function AboutMe({ themeIsDark }) {
                     <p className='mt-2 text-center'>Autonome</p>
                   </div>
                 </div>
-                <p className='mt-8 lg:mx-2 mx-20 text-sm lg:text-base lg:text-left text-center' style={{ lineHeight: 1.7 }}>
+                <p className='mt-8 lg:mx-2 md:mx-20 sm:mx-4 text-sm lg:text-base lg:text-left text-center' style={{ lineHeight: 1.7 }}>
                   A 26 ans, je suis actuellement en reconversion pour travailler dans le milieu du développement web.
                   <br />
                   Suite à un bac +2 développeur web à la Digital School de Brest, j’ai pu acquérir les bases de plusieurs langages web (HTML, CSS, Javascript, PHP), la gestion de bases de données mais aussi l’utilisation de logiciels tels que Illustrator, Blender ou Figma que j’utilise régulièrement pour créer des maquettes interactives.
