@@ -90,13 +90,13 @@ function Projects({ themeIsDark }) {
 
   return (
     <section id='projects'>
-      <div id='about' className='mt-36'>
+      <div id='about' className='mt-16 lg:mt-36'>
         <div className='flex flex-col items-center'>
           <p className='text-gray-400 text-xs'>Mes projets</p>
           <h1 className='font-medium text-2xl text-yellow-500'>Mon Portfolio</h1>
         </div>
 
-        <div className='mt-10 rounded-lg'>
+        <div className='mt-5 lg:mt-10 rounded-lg'>
           <div className='p-8'>
             {/* Filtre de projet */}
             <div
