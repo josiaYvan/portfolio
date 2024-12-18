@@ -121,11 +121,11 @@ function Projects({ themeIsDark }) {
             </div>
 
             {/* Cartes de projet avec animation */}
-            <div className='grid grid-cols-2 gap-6'>
+            <div className='flex flex-wrap justify-center gap-5 lg:gap-10'>
               {filterProjects().map((project, index) => (
                 <motion.div
                   key={index}
-                  className='p-4 m-4 rounded-2xl shadow-lg h-[28.5rem] overflow-hidden flex flex-col'
+                  className='p-4 rounded-2xl shadow-lg h-[330px] overflow-hidden flex flex-col'
                   style={{
                     backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white
                   }}
@@ -134,26 +134,29 @@ function Projects({ themeIsDark }) {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <img
-                    src={project.imageSrc}
-                    alt={project.altText}
-                    className='rounded-xl h-[350px] object-cover'
-                  />
-                  <div className='flex-grow'>
-                    <h3 className='text-lg font-bold mt-5 mb-2'>{project.title}</h3>
-                    <button
-                      onClick={() => openPopup(project)}
-                      className='text-yellow-500 flex items-center text-xs group'
-                    >
-                      <p>Voir plus</p>
-                      <span className='ml-1 group-hover:ml-3 transition-all duration-300 ease-in-out'>
-                        →
-                      </span>
-                    </button>
+                  <div className='flex-1 w-[250px] flex-grow'>
+                    <img
+                      src={project.imageSrc}
+                      alt={project.altText}
+                      className='rounded-xl h-[200px] w-full object-cover'
+                    />
+                    <div className='flex-grow'>
+                      <h3 className='text-lg font-bold mt-5 mb-2'>{project.title}</h3>
+                      <button
+                        onClick={() => openPopup(project)}
+                        className='text-yellow-500 flex items-center text-xs group'
+                      >
+                        <p>Voir plus</p>
+                        <span className='ml-1 group-hover:ml-3 transition-all duration-300 ease-in-out'>
+                          →
+                        </span>
+                      </button>
+                    </div>
                   </div>
                 </motion.div>
               ))}
             </div>
+
           </div>
         </div>
 
