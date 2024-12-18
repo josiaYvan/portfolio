@@ -5,7 +5,7 @@ import { myStyle } from '../../utils/style';
 function Footer({ themeIsDark }) {
   return (
     <footer className='relative w-full pb-32 bg-yellow-50'>
-      <div className='absolute -top-4 w-full z-10 h-10 transition-colors duration-500 ease-in-out' style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }} />
+      <div className='absolute -top-7 w-full z-10 h-10 transition-colors duration-500 ease-in-out' style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }} />
       <div className='z-0'>
         <svg
           viewBox='0 0 1440 320'
@@ -19,13 +19,13 @@ function Footer({ themeIsDark }) {
           />
         </svg>
       </div>
-      <div className='relative flex -mt-20 flex-col items-center text-center'>
-        <h2 className='text-3xl font-bold text-yellow-500'>by Josia Y.</h2>
+      <div className='relative flex flex-col items-center text-center'>
+        <h2 className='text-3xl font-medium text-yellow-500'>by Josia Y.</h2>
         <nav className='mt-4'>
-          <a href='#about' className='mx-2 text-gray-600 hover:text-gray-800'>
+          <a href='#about' className='mx-3 text-gray-600 hover:text-gray-800'>
             À propos
           </a>
-          <a href='#projects' className='mx-2 text-gray-600 hover:text-gray-800'>
+          <a href='#projects' className='mx-3 text-gray-600 hover:text-gray-800'>
             Portfolio
           </a>
         </nav>
