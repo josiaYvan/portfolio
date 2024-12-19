@@ -18,6 +18,10 @@ function Contact({ themeIsDark }) {
     }
   };
 
+  const handleSendMail = () => {
+    messageApi.warning('Ce formulaire n\'est pas disponible pour le moment. Veuillez envoyer votre message par e-mail.');
+  };
+
   return (
     <section id='contact'>
       <div className='mt-20 lg:mt-36'>
@@ -142,7 +146,8 @@ function Contact({ themeIsDark }) {
 
                 {/* Bouton Envoyer */}
                 <button
-                  type='submit'
+                  type='button'
+                  onClick={handleSendMail}
                   className='px-4 py-2 bg-yellow-500 rounded-lg hover:bg-yellow-600 transition'
                   style={{
                     color: !themeIsDark ? myStyle.white : myStyle.bg
