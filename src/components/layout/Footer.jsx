@@ -53,7 +53,7 @@ function Footer({ themeIsDark }) {
             Portfolio
           </button>
         </nav>
-        <p className='mt-4 text-gray-500 text-sm'>© Melaniebicis.com. All rights reserved</p>
+        <p className='mt-4 text-gray-500 text-sm'>© Josiayvan.com. All rights reserved</p>
       </div>
     </footer>
   );
