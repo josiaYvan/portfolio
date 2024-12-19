@@ -1,10 +1,23 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import { message } from 'antd';
 import { MailOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { myStyle } from '../../utils/style';
 
 function Contact({ themeIsDark }) {
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const copyToClipboard = (text) => {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text);
+      messageApi.open({
+        content: 'Copié dans le presse-papiers !'
+      });
+    }
+  };
+
   return (
     <section id='contact'>
       <div className='mt-20 lg:mt-36'>
@@ -28,16 +41,16 @@ function Contact({ themeIsDark }) {
                   <MailOutlined />
                 </div>
                 <h2 className='mb-2'>Email</h2>
-                <Link
-                  to='mailto:example@mail.com'
-                  target='_blank'
-                  className='text-yellow-500 flex justify-center text-xs group'
+                {contextHolder}
+                <button
+                  onClick={() => copyToClipboard('josiayvan@gmail.com')}
+                  className='text-yellow-500 flex mx-auto text-xs group'
                 >
                   <p>Un mail par ici</p>
                   <span className='ml-1 group-hover:ml-3 transition-all duration-300 ease-in-out'>
                     →
                   </span>
-                </Link>
+                </button>
               </div>
 
               {/* Carte WhatsApp */}
@@ -50,7 +63,7 @@ function Contact({ themeIsDark }) {
                 </div>
                 <h2 className='mb-2'>Whatsapp</h2>
                 <Link
-                  to='https://api.whatsapp.com/send?phone=261386183236&text=Hello'
+                  to='https://wa.me/261386183236'
                   target='_blank'
                   className='text-yellow-500 flex justify-center text-xs group'
                 >

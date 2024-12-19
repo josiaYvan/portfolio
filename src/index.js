@@ -18,7 +18,7 @@ import antTheme from './utils/theme';
 
 import 'antd/dist/reset.css';
 import './index.css';
-import { SocketContextProvider } from './context/SocketContext';
+// import { SocketContextProvider } from './context/SocketContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,9 +26,9 @@ root.render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ConfigProvider theme={{ token: antTheme }}>
-          <SocketContextProvider>
-            <App />
-          </SocketContextProvider>
+          {/* <SocketContextProvider> */}
+          <App />
+          {/* </SocketContextProvider> */}
         </ConfigProvider>
       </PersistGate>
     </Provider>
