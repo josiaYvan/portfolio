@@ -6,69 +6,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { myStyle } from '../../utils/style';
 import Popup from './Popup';
-
-const projects = [
-  {
-    title: 'Maquette Bed & Desk',
-    description: 'Découvrez notre sélection',
-    imageSrc: '/images/apk.png',
-    altText: 'Bed & Desk',
-    link: '#',
-    tasks: [
-      'Vérifier que l\'image "/images/apk.png" existe et s\'affiche correctement.',
-      'Ajouter un popup "Voir plus" pour afficher les détails du projet.',
-      'Vérifier que le projet est associé aux tags "Design" et "Web".',
-      'Rédiger une description détaillée sur la sélection à découvrir.',
-      'Configurer le lien de redirection dans la propriété "link".'
-    ],
-    tags: ['Design', 'Web']
-  },
-  {
-    title: 'Gameboy en 3D avec Blender',
-    description: 'Un projet intéressant avec Blender',
-    imageSrc: '/images/webradio.png',
-    altText: 'Gameboy 3D',
-    link: '#',
-    tasks: [
-      'Vérifier que l\'image "/images/webradio.png" existe et s\'affiche correctement.',
-      'Ajouter un popup "Voir plus" pour afficher les détails du projet.',
-      'Vérifier que le projet est associé aux tags "Prototype Figma" et "Design".',
-      'Inclure une description sur le processus de création avec Blender.',
-      'Configurer le lien de redirection dans la propriété "link".'
-    ],
-    tags: ['Prototype Figma', 'Design']
-  },
-  {
-    title: 'Busnay',
-    description: 'Un projet intéressant de gestion de transport scolaire',
-    imageSrc: '/images/busnay.png',
-    altText: 'Busnay',
-    link: '#',
-    tasks: [
-      'Vérifier que l\'image "/images/busnay.png" existe et s\'affiche correctement.',
-      'Ajouter un popup "Voir plus" pour afficher les détails du projet.',
-      'Vérifier que le projet est associé au tag "Web".',
-      'Rédiger une description complète sur la gestion de transport scolaire.',
-      'Configurer le lien de redirection dans la propriété "link".'
-    ],
-    tags: ['Web']
-  },
-  {
-    title: 'Radio EMIA',
-    description: 'Un projet intéressant de gestion de transport scolaire',
-    imageSrc: '/images/radioemia.png',
-    altText: 'Busnay',
-    link: '#',
-    tasks: [
-      'Vérifier que l\'image "/images/radioemia.png" existe et s\'affiche correctement.',
-      'Ajouter un popup "Voir plus" pour afficher les détails du projet.',
-      'Vérifier que le projet est associé aux tags "Web" et "Design".',
-      'Rédiger une description complète sur le projet.',
-      'Configurer le lien de redirection dans la propriété "link".'
-    ],
-    tags: ['Web', 'Design']
-  }
-];
+import { projects } from '../../utils/data';
 
 function Projects({ themeIsDark }) {
   const [selectedTag, setSelectedTag] = useState('Tous');
@@ -103,7 +41,7 @@ function Projects({ themeIsDark }) {
               className='flex justify-center space-x-6 mb-8'
               style={{ color: !themeIsDark ? myStyle.bg : myStyle.white }}
             >
-              {['Tous', 'Web', 'Prototype Figma', 'Design'].map((tag) => (
+              {['Tous', 'Web', 'Application', 'Design'].map((tag) => (
                 <button
                   key={tag}
                   className={`${

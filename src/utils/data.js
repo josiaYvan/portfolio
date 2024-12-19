@@ -140,3 +140,51 @@ export const experiences = [
     tasks: ['Formation sur le développement personnel']
   }
 ];
+
+export const projects = [
+  {
+    title: 'Application Radio EMIA',
+    description: 'Une application mobile permettant aux utilisateurs de s’abonner et de recevoir des notifications quotidiennes sur les podcasts et chansons inspirantes publiés par Radio EMIA.',
+    imageSrc: '/images/apk.png',
+    altText: 'Application Radio EMIA',
+    link: 'https://play.google.com/store/apps/details?id=com.radioemia.radio_v_01&hl=fr',
+    tasks: [],
+    tags: ['Design', 'Application']
+  },
+  {
+    title: 'Site Web Radio EMIA',
+    description: 'Une version web de Radio EMIA accessible à tous, offrant une diffusion de la radio en ligne via le site officiel (radioemia.com).',
+    imageSrc: '/images/webradio.png',
+    altText: 'Site Web Radio EMIA',
+    link: '#',
+    tasks: [],
+    tags: ['Web']
+  },
+  {
+    title: 'Console d’administration Radio EMIA',
+    description: 'Une plateforme web dédiée à la gestion des ressources de Radio EMIA, conçue pour un usage administratif.',
+    imageSrc: '/images/radioemia.png',
+    altText: 'Console Radio EMIA',
+    link: '#',
+    tasks: [],
+    tags: ['Web', 'Design']
+  },
+  {
+    title: 'Portail client Busnay',
+    description: 'Un site web permettant aux utilisateurs, particuliers ou membres d’organisations (sociétés, écoles), d’acheter leurs tickets et de réserver leurs places pour un transport simplifié et sécurisé.',
+    imageSrc: '/images/busnay.png',
+    altText: 'Portail Client Busnay',
+    link: '#',
+    tasks: [],
+    tags: ['Design', 'Web']
+  },
+  {
+    title: 'Console d’administration Busnay',
+    description: 'Une interface web destinée à la gestion des ressources pour les administrateurs du service Busnay.',
+    imageSrc: '/images/radioemia.png',
+    altText: 'Console Busnay',
+    link: '#',
+    tasks: [],
+    tags: ['Web', 'Design']
+  }
+];
