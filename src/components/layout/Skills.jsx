@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import {
-  ConsoleSqlOutlined, GithubFilled, GitlabFilled, Html5Filled, PushpinOutlined, WechatWorkOutlined
+  GithubFilled, JavaScriptOutlined
 } from '@ant-design/icons';
 import { myStyle } from '../../utils/style';
 
@@ -13,115 +14,122 @@ function Skills({ themeIsDark }) {
           <h1 className='font-medium text-2xl text-yellow-500'>Mes compétences</h1>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-8 p-6'>
-          {/* Section Développement Web */}
           <div className='mt-5 lg:mt-16 min-w-[400px] lg:w-full mx-auto rounded-2xl shadow-md py-10 px-20' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
-            <h2 className='text-yellow-500 text-center mb-6'>Développement Web</h2>
+            <h2 className='text-yellow-500 text-center mb-6'>Développement</h2>
             <div className='grid grid-cols-2 gap-6'>
-              {/* HTML */}
               <div className='flex flex-col'>
                 <span className='text-xl text-yellow-500'>
-                  <Html5Filled />
-                </span>
-                <div>
-                  <h3 className=''>HTML</h3>
-                  <p className='text-gray-400 text-xs'>Intermédiaire</p>
-                </div>
-              </div>
-              {/* Wordpress */}
-              <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>
-                  <WechatWorkOutlined />
-                </span>
-                <div>
-                  <h3 className=''>Wordpress</h3>
-                  <p className='text-gray-400 text-xs'>Intermédiaire</p>
-                </div>
-              </div>
-              {/* CSS */}
-              <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>
-                  <GithubFilled />
-                </span>
-                <div>
-                  <h3 className=''>CSS</h3>
-                  <p className='text-gray-400 text-xs'>Intermédiaire</p>
-                </div>
-              </div>
-              {/* SQL */}
-              <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>
-                  <GitlabFilled />
-                </span>
-                <div>
-                  <h3 className=''>SQL</h3>
-                  <p className='text-gray-400 text-xs'>Les bases</p>
-                </div>
-              </div>
-              {/* Javascript */}
-              <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>
-                  <ConsoleSqlOutlined />
+                  <JavaScriptOutlined />
                 </span>
                 <div>
                   <h3 className=''>Javascript</h3>
-                  <p className='text-gray-400 text-xs'>Les bases</p>
+                  <p className='text-gray-400 text-xs'>Avancé</p>
                 </div>
               </div>
-              {/* PHP */}
               <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>
-                  <PushpinOutlined />
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/react.png' />
                 </span>
                 <div>
-                  <h3 className=''>PHP</h3>
-                  <p className='text-gray-400 text-xs'>Les bases</p>
+                  <h3 className=''>React JS</h3>
+                  <p className='text-gray-400 text-xs'>Avancé</p>
+                </div>
+              </div>
+              <div className='flex flex-col'>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/node.png' />
+                </span>
+                <div>
+                  <h3 className=''>Node</h3>
+                  <p className='text-gray-400 text-xs'>Avancé</p>
+                </div>
+              </div>
+              <div className='flex flex-col'>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/mongo.png' />
+                </span>
+                <div>
+                  <h3 className=''>Mongoose</h3>
+                  <p className='text-gray-400 text-xs'>Avancé</p>
+                </div>
+              </div>
+              <div className='flex flex-col'>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/flutter.png' />
+                </span>
+                <div>
+                  <h3 className=''>Flutter</h3>
+                  <p className='text-gray-400 text-xs'>Avancé</p>
+                </div>
+              </div>
+              <div className='flex flex-col'>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/qt.png' />
+                </span>
+                <div>
+                  <h3 className=''>QT</h3>
+                  <p className='text-gray-400 text-xs'>Intermédiaire</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Section Web-Design */}
           <div className='mt-5 lg:mt-16 min-w-[400px] lg:w-full mx-auto  rounded-2xl shadow-md py-10 px-20' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
-            <h2 className='text-yellow-500 text-center mb-6'>Web-Design</h2>
+            <h2 className='text-yellow-500 text-center mb-6'>IT Management</h2>
             <div className='grid grid-cols-2 gap-6'>
-              {/* Figma */}
               <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>🎨</span>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/sharepoint.png' />
+                </span>
                 <div>
-                  <h3 className=''>Figma</h3>
-                  <p className='text-gray-400 text-xs'>Avancé</p>
+                  <h3 className=''>Sharepoint</h3>
+                  <p className='text-gray-400 text-xs'>Gestion de tâche</p>
                 </div>
               </div>
-              {/* Premiere Pro */}
               <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>🎞️</span>
+                <span className='text-xl text-yellow-500'>
+                  <GithubFilled />
+                </span>
                 <div>
-                  <h3 className=''>Premier Pro</h3>
-                  <p className='text-gray-400 text-xs'>Les bases</p>
+                  <h3 className=''>Git</h3>
+                  <p className='text-gray-400 text-xs'>Gestion de code</p>
                 </div>
               </div>
-              {/* Illustrator */}
               <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>🖌️</span>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/ai.png' />
+                </span>
                 <div>
                   <h3 className=''>Illustrator</h3>
-                  <p className='text-gray-400 text-xs'>Intermédiaire</p>
+                  <p className='text-gray-400 text-xs'>Prototypage et design</p>
                 </div>
               </div>
-              {/* Blender */}
               <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>🌀</span>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/figma.png' />
+                </span>
                 <div>
-                  <h3 className=''>Blender</h3>
-                  <p className='text-gray-400 text-xs'>Les bases</p>
+                  <h3 className=''>Figma</h3>
+                  <p className='text-gray-400 text-xs'>Prototypage</p>
                 </div>
               </div>
-              {/* Photoshop */}
               <div className='flex flex-col'>
-                <span className='text-xl text-yellow-500'>📷</span>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/ms.png' />
+                </span>
                 <div>
-                  <h3 className=''>Photoshop</h3>
-                  <p className='text-gray-400 text-xs'>Intermédiaire</p>
+                  <h3 className=''>Ms Teams</h3>
+                  <p className='text-gray-400 text-xs'>gestion de communication</p>
+                </div>
+              </div>
+              <div className='flex flex-col'>
+                <span className='text-xl w-7 text-yellow-500'>
+                  <img src='/icons/ms.png' />
+                </span>
+                {' '}
+                <div>
+                  <h3 className=''>GLPI</h3>
+                  <p className='text-gray-400 text-xs'>Gestion de Ticket</p>
                 </div>
               </div>
             </div>
