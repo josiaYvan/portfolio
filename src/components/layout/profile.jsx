@@ -1,20 +1,29 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { motion } from 'framer-motion';
 import { myStyle } from '../../utils/style';
 import { ScrollIndicator } from './ScrollIndicator';
 import LinkedIn from './LinkedIn';
 
 function Profile({ themeIsDark }) {
+  const svgVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+  };
+
   return (
     <div className='relative mt-10'>
-      <LinkedIn themeIsDark={themeIsDark} />
       <ScrollIndicator themeIsDark={themeIsDark} />
+      <LinkedIn themeIsDark={themeIsDark} />
 
       <div className='lg:w-[900px] w-[35rem] mx-auto'>
-        <svg
+        <motion.svg
           className='w-full'
           viewBox='0 0 1044 902'
           fill='none'
+          initial='hidden'
+          animate='visible'
+          variants={svgVariants}
         >
           <defs>
             <pattern
@@ -73,7 +82,7 @@ function Profile({ themeIsDark }) {
             strokeOpacity='0.3'
             d='M309.405 513.417C178.942 446.896 93.335 242.521 215.153 280.729C336.972 318.937 271.44 137.696 424.036 155.985C643.101 182.241 672.07 261.6 648.188 320.303C562.96 529.796 715.932 438.194 776.086 533.061C836.24 627.927 655.305 683.472 628.12 734.224C595.84 794.487 478.963 660.433 435.202 748.245C418.025 782.714 283.942 779.059 269.76 676.319C255.578 573.578 343.021 530.557 309.405 513.417Z'
           />
-        </svg>
+        </motion.svg>
       </div>
     </div>
   );
