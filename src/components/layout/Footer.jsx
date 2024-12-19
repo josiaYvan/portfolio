@@ -1,8 +1,21 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable max-len */
 import React from 'react';
 import { myStyle } from '../../utils/style';
 
 function Footer({ themeIsDark }) {
+  const handleScroll = (id) => {
+    if (id === 'home') {
+      // Défile vers le haut de la page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
   return (
     <footer className='relative w-full pb-32 bg-yellow-50'>
       <div className='absolute -top-7 w-full z-10 h-10 transition-colors duration-500 ease-in-out' style={{ backgroundColor: themeIsDark ? myStyle.bg : myStyle.light }} />
@@ -20,14 +33,25 @@ function Footer({ themeIsDark }) {
         </svg>
       </div>
       <div className='relative flex flex-col items-center text-center'>
-        <h2 className='text-3xl font-medium text-yellow-500'>by Josia Y.</h2>
+        <button
+          onClick={() => handleScroll('home')}
+          className='text-3xl font-medium text-yellow-500'
+        >
+          by Josia Y.
+        </button>
         <nav className='mt-4'>
-          <a href='#about' className='mx-3 text-gray-600 hover:text-gray-800'>
+          <button
+            onClick={() => handleScroll('about')}
+            className='mx-3 text-gray-600 hover:text-gray-800'
+          >
             À propos
-          </a>
-          <a href='#projects' className='mx-3 text-gray-600 hover:text-gray-800'>
+          </button>
+          <button
+            onClick={() => handleScroll('projects')}
+            className='mx-3 text-gray-600 hover:text-gray-800'
+          >
             Portfolio
-          </a>
+          </button>
         </nav>
         <p className='mt-4 text-gray-500 text-sm'>© Melaniebicis.com. All rights reserved</p>
       </div>

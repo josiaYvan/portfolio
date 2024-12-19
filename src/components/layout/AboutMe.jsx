@@ -60,7 +60,7 @@ function AboutMe({ themeIsDark }) {
                   }}
                   onClick={() => handleScroll('contact')}
                 >
-                  <a href='#contact'>Contactez moi</a>
+                  Contactez moi
                 </button>
               </div>
             </div>
