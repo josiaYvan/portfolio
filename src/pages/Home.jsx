@@ -1,12 +1,3 @@
-/* eslint-disable react/button-has-type */
-/**
- * @name Bus'nay
- * @author Mr. Josia Yvan
- * @description System API and Management System Software ~ Developed By Mr. Josia Yvan
- * @copyright ©2024 ― Mr. Josia Yvan.  All rights reserved.
- * @version v0.0.1
- *
- */
 import { useState, useEffect } from 'react';
 import AboutMe from '../components/layout/AboutMe';
 import Menu from '../components/layout/Menu';
@@ -20,13 +11,21 @@ import Footer from '../components/layout/Footer';
 import Welcome from '../components/layout/Welcome';
 
 function Home() {
-  const [themeIsDark, setThemeIsDark] = useState(true);
+  const [themeIsDark, setThemeIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem('themeIsDark');
+    return savedTheme ? JSON.parse(savedTheme) : true;
+  });
+
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section'); // Cible toutes les sections avec l'attribut ID
+    localStorage.setItem('themeIsDark', JSON.stringify(themeIsDark));
+  }, [themeIsDark]);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 3; // Ajustez la position pour une meilleure précision
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
       let currentSection = '';
 
       sections.forEach((section) => {
@@ -38,7 +37,7 @@ function Home() {
         }
       });
 
-      setActiveSection(currentSection); // Met à jour la section active
+      setActiveSection(currentSection);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -68,7 +67,6 @@ function Home() {
       </div>
       <Footer themeIsDark={themeIsDark} />
     </div>
-
   );
 }
 
