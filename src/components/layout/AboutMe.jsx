@@ -24,14 +24,14 @@ function AboutMe({ themeIsDark }) {
             <img
               src='/images/identity.png'
               alt='Profile'
-              className='w-[320px] h-[420px] rounded-3xl mx-auto lg:mr-4 lg:mt-10 filter grayscale brightness-75'
+              className='w-[320px] h-[420px] rounded-3xl mx-auto lg:mr-4 lg:mt-40 filter grayscale brightness-75'
             />
             <div className='flex flex-col lg:ml-20 mt-8'>
               <div>
                 <div className='flex justify-around mx-auto w-[450px] lg:w-[500px]'>
                   <div className='flex flex-col items-center w-40 h-26 lg:h-32 font-semibold lg:text-base text-sm lg:py-4 py-3 mx-1 shadow-md lg:rounded-2xl rounded-xl' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
                     <BulbOutlined className='mt-2 text-yellow-500 lg:text-2xl text-xl' />
-                    <p className='mt-2 text-center'>Créative</p>
+                    <p className='mt-2 text-center'>Créatif</p>
                   </div>
                   <div className='flex flex-col items-center w-40 h-26 lg:h-32 font-semibold lg:text-base text-sm lg:py-4 py-3 mx-1 shadow-md lg:rounded-2xl rounded-xl' style={{ backgroundColor: themeIsDark ? myStyle.yellowDark : myStyle.white }}>
                     <CommentOutlined className='mt-2 text-yellow-500 lg:text-2xl text-xl' />
@@ -43,14 +43,21 @@ function AboutMe({ themeIsDark }) {
                   </div>
                 </div>
                 <p className='mt-8 lg:mx-2 md:mx-20 sm:mx-4 text-sm lg:text-base lg:text-left text-center' style={{ lineHeight: 1.7 }}>
-                  A 26 ans, je suis actuellement en reconversion pour travailler dans le milieu du développement web.
+                  À 21 ans, originaire de
+                  <b> Madagascar</b>
+                  , je suis immergé dans le monde des technologies de l'information (IT) depuis maintenant 5 ans. Cette expérience m'a permis d'acquérir des compétences significatives, tant dans des contextes réels que professionnels.
                   <br />
-                  Suite à un bac +2 développeur web à la Digital School de Brest, j’ai pu acquérir les bases de plusieurs langages web (HTML, CSS, Javascript, PHP), la gestion de bases de données mais aussi l’utilisation de logiciels tels que Illustrator, Blender ou Figma que j’utilise régulièrement pour créer des maquettes interactives.
+                  Titulaire d'un baccalauréat scientifique (série C), je suis actuellement en cinquième année de ma formation universitaire en alternance à l'ESTI (
+                  <a href='https://esti.mg' target='_blank' rel='noopener noreferrer'>esti.mg</a>
+                  ), où j'ai obtenu une licence, avant de poursuivre un master dans le même établissement.
                   <br />
-                  J’ai ensuite pu exercer et améliorer ces connaissances avec un stage de 3 mois aux côtés d’un développeur web expérimenté.
+                  En parallèle de ma formation académique, mon appétence pour l'informatique m'a conduit à renforcer mes compétences de manière autodidacte et à participer à des programmes de formation professionnelle, comme ceux proposés par l'Orange Digital Center (
+                  <a href='https://www.orangedigitalcenters.com/country/MG/home' target='_blank' rel='noopener noreferrer'>orangedigitalcenters.com</a>
+                  ).
                   <br />
-                  J’aimerais maintenant continuer ma formation avec une troisième année en bachelor « Développement web » en alternance toujours à la Digital School.
+                  Ces expériences, cumulées tout au long de mon parcours, m'ont permis de développer des aptitudes solides dans la gestion de projets passés et d'acquérir une expertise que je souhaite aujourd'hui mettre au service de ceux qui en ont besoin.
                 </p>
+
               </div>
               <div className='mt-8 mx-auto lg:ml-2'>
                 <button

@@ -34,7 +34,7 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #818181; /* Couleur de fond de la piste de la barre de défilement */
+  background: #a7a7a7; /* Couleur de fond de la piste de la barre de défilement */
   /* border-radius: 10px; Arrondi des coins de la piste */
 }
 
