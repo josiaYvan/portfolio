@@ -44,18 +44,17 @@ function AboutMe({ themeIsDark }) {
                 </div>
                 <p className='mt-8 lg:mx-2 md:mx-20 sm:mx-4 text-sm lg:text-base lg:text-left text-center' style={{ lineHeight: 1.7 }}>
                   À 21 ans, originaire de
-                  <b> Madagascar</b>
-                  , je suis immergé dans le monde des technologies de l'information (IT) depuis maintenant 5 ans. Cette expérience m'a permis d'acquérir des compétences significatives, tant dans des contextes réels que professionnels.
-                  <br />
-                  Titulaire d'un baccalauréat scientifique (série C), je suis actuellement en cinquième année de ma formation universitaire en alternance à l'ESTI (
+                  {' '}
+                  <b>Madagascar</b>
+                  , je suis dans le monde des technologies de l'information (IT) depuis 5 ans. Titulaire d'un baccalauréat scientifique (série C), je suis actuellement en cinquième année à l'ESTI (
                   <a href='https://esti.mg' target='_blank' rel='noopener noreferrer'>esti.mg</a>
-                  ), où j'ai obtenu une licence, avant de poursuivre un master dans le même établissement.
+                  ), où je poursuis un master.
                   <br />
-                  En parallèle de ma formation académique, mon appétence pour l'informatique m'a conduit à renforcer mes compétences de manière autodidacte et à participer à des programmes de formation professionnelle, comme ceux proposés par l'Orange Digital Center (
+                  En parallèle,  mon appétence pour l'informatique m'a conduit à renforcer mes compétences de manière autodidacte et participé à des formations professionnelles, comme celles de l'Orange Digital Center (
                   <a href='https://www.orangedigitalcenters.com/country/MG/home' target='_blank' rel='noopener noreferrer'>orangedigitalcenters.com</a>
                   ).
                   <br />
-                  Ces expériences, cumulées tout au long de mon parcours, m'ont permis de développer des aptitudes solides dans la gestion de projets passés et d'acquérir une expertise que je souhaite aujourd'hui mettre au service de ceux qui en ont besoin.
+                  Ces expériences, cumulées tout au long de mon parcours, m'ont permis de développer des aptitudes solides dans la gestion de projets passés et d'acquérir encore plus d'expertise que je souhaite aujourd'hui mettre au service de ceux qui en ont besoin.
                 </p>
 
               </div>
