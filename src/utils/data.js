@@ -4,7 +4,7 @@ export const experiences = [
     description: 'ESTI',
     duration: '2024 - 2026',
     tag: 'Formations',
-    tasks: ['École Supérieure des Technologies de l’Information', 'Management des systèmes d’information']
+    tasks: ['École Supérieure des Technologies de l’Information', 'Diplôme en Management des systèmes d’information']
   },
   {
     title: 'Alternant Responsable technique de projets',
@@ -130,7 +130,7 @@ export const experiences = [
     description: 'ESTI',
     duration: 'Mars 2020 - 2023',
     tag: 'Formations',
-    tasks: ['École Supérieure des Technologies de l’Information', 'Intégration et développement informatique']
+    tasks: ['École Supérieure des Technologies de l’Information', 'Diplôme en  Intégration et développement informatique']
   },
   {
     title: 'The John Maxwell Team',
