@@ -7,7 +7,7 @@ import { CloseOutlined } from '@ant-design/icons';
 import { myStyle } from '../../utils/style';
 
 function Popup({
-  showPopup, selectedItem, onClose, themeIsDark
+  showPopup, selectedItem, onClose, themeIsDark, label
 }) {
   const popupRef = useRef(null);
 
@@ -45,12 +45,12 @@ function Popup({
 
           {/* Liste des tâches */}
           <div className='mt-4'>
-            <h4 className='font-medium'>Tâches</h4>
+            <h4 className='font-medium'>{label}</h4>
             <ul className='pl-5 mt-4'>
               {selectedItem.tasks.map((task, index) => (
-                <li key={index} className='text-gray-500 text-sm mt-2'>
+                <li key={index} className='text-gray-500 flex text-sm mt-2'>
                   <span className='text-yellow-500 mr-4'>✔</span>
-                  {task}
+                  <p>{task}</p>
                 </li>
               ))}
             </ul>
