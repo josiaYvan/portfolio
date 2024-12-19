@@ -1,11 +1,11 @@
 export const myStyle = {
-  bg: '#1F1F1F',
-  darkColor: '#e8e8e8',
+  bg: 'rgb(31, 31, 31)',
+  darkColor: 'rgb(185, 183, 183)',
   brown: 'rgb(84, 61, 70)',
-  white: '#fff',
+  white: 'rgb(255, 255, 255)',
   // light: 'rgb(254, 251, 236)',
-  light: '#F3F3F3',
-  yellowDark: '#6754003d',
+  light: 'rgb(243, 243, 243)',
+  yellowDark: 'rgba(103, 84, 0, 0.24)',
   yellow: 'rgb(227, 178, 0)',
-  path: '#E5E5E5'
+  path: 'rgb(229, 229, 229)'
 };
