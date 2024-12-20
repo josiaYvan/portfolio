@@ -44,11 +44,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "lint": "eslint .",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
