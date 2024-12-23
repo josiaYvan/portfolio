@@ -7,22 +7,18 @@
  *
  */
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import NotFound from './pages/Error';
+// import NotFound from './pages/Error';
 import Home from './pages/Home';
-import Main from './pages/Main';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* HOME ROUTE */}
-        <Route path='/' element={<Home />} />
-
-        {/* DASHBOARD ROUTE */}
-        <Route path='/main/:tab' element={<Main />} />
+        <Route path='*' element={<Home />} />
 
         {/* ERROR ROUTE */}
-        <Route path='*' element={<NotFound />} />
+        {/* <Route path='*' element={<NotFound />} /> */}
       </Routes>
     </BrowserRouter>
   );

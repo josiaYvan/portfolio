@@ -22,7 +22,7 @@ function AboutMe({ themeIsDark }) {
         <div className=' mt-5 xl:mt-20 rounded-lg'>
           <div className='flex flex-col lg:flex-row p-4'>
             <img
-              src='/images/identity.png'
+              src='images/identity.png'
               alt='Profile'
               className='w-[320px] h-[420px] rounded-3xl mx-auto lg:mr-4 lg:mt-40 filter grayscale brightness-75'
             />

@@ -28,7 +28,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/react.png' />
+                  <img src='icons/react.png' />
                 </span>
                 <div>
                   <h3 className=''>React JS</h3>
@@ -37,7 +37,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/node.png' />
+                  <img src='icons/node.png' />
                 </span>
                 <div>
                   <h3 className=''>Node</h3>
@@ -46,7 +46,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/mongo.png' />
+                  <img src='icons/mongo.png' />
                 </span>
                 <div>
                   <h3 className=''>Mongoose</h3>
@@ -55,7 +55,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/flutter.png' />
+                  <img src='icons/flutter.png' />
                 </span>
                 <div>
                   <h3 className=''>Flutter</h3>
@@ -64,7 +64,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/qt.png' />
+                  <img src='icons/qt.png' />
                 </span>
                 <div>
                   <h3 className=''>QT</h3>
@@ -79,7 +79,7 @@ function Skills({ themeIsDark }) {
             <div className='grid grid-cols-2 gap-6'>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/sharepoint.png' />
+                  <img src='icons/sharepoint.png' />
                 </span>
                 <div>
                   <h3 className=''>Sharepoint</h3>
@@ -97,7 +97,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/ai.png' />
+                  <img src='icons/ai.png' />
                 </span>
                 <div>
                   <h3 className=''>Illustrator</h3>
@@ -106,7 +106,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/figma.png' />
+                  <img src='icons/figma.png' />
                 </span>
                 <div>
                   <h3 className=''>Figma</h3>
@@ -115,7 +115,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/ms.png' />
+                  <img src='icons/ms.png' />
                 </span>
                 <div>
                   <h3 className=''>Ms Teams</h3>
@@ -124,7 +124,7 @@ function Skills({ themeIsDark }) {
               </div>
               <div className='flex flex-col'>
                 <span className='text-xl w-7 text-yellow-500'>
-                  <img src='/icons/ms.png' />
+                  <img src='icons/ms.png' />
                 </span>
                 {' '}
                 <div>

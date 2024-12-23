@@ -30,7 +30,7 @@ function Welcome({ themeIsDark }) {
              hover:shadow-yellow-700 active:shadow-inner
              transition-all duration-600'
           >
-            <a href='/documents/cv.pdf' download='CV de Josia Y. Ingenieur informatique.pdf'>
+            <a href='documents/cv.pdf' download='CV de Josia Y. Ingenieur informatique.pdf'>
               Télécharger mon CV
             </a>
           </button>

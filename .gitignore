@@ -12,6 +12,7 @@ build
 # images
 /public/images
 /public/vectors
+/public/icons
 
 
 # misc

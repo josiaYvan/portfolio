@@ -33,7 +33,7 @@ function Profile({ themeIsDark }) {
               height='900'
             >
               <image
-                href='images/profile.jpg'
+                href='images/profile.png'
                 y='100'
                 x='157'
                 width='700'
